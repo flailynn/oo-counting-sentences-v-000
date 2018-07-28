@@ -18,7 +18,11 @@ class String
     array = []
     count = 0
 
-    array = self.split(/[.?!]/)
-    binding.pry
+    array = []
+   count = 0
+
+   array = self.split(/[.?!]/)
+   array.delete_if() {|element| element.empty?}
+   count = array.length
   end
 end
